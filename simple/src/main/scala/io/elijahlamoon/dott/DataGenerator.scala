@@ -1,10 +1,9 @@
 package io.elijahlamoon.dott
 
 import scala.util.Random
-import io.elijahlamoon.dott.randomDateInYear
+
 import model._
 import Category._
-import io.elijahlamoon.dott.randomDateTimeSpecific
 
 object DataGenerator {
   import Samples._

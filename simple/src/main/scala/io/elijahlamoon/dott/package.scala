@@ -1,8 +1,8 @@
 package io.elijahlamoon
 
+import java.time.LocalDate
 import java.time.LocalDateTime
 import scala.util.Random
-import java.time.LocalDate
 
 package object dott {
 
