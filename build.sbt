@@ -56,7 +56,7 @@ lazy val root = project
 lazy val simple = project
   .in(file("simple"))
   .settings(baseSettings)
-  .settings(name := "dott-simple", libraryDependencies ++= sharedDependencies)
+  .settings(name := "dott-simple", libraryDependencies += munit % Test)
 
 lazy val overengineered = project
   .in(file("overengineered"))
