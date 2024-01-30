@@ -10,7 +10,7 @@ However, soon enough to be able to implement basic required functionality I real
 Still, I have wasted a really decent chunk of time allowed for completion of the assignment, and I'm not happy with the result.
 
 ## Overview
-`overengineered` folder contains some redundant files, which I intended to use in one of the solutions, but the reason why I abandoned it is explained [above](#note), so it serves no purpose for now.
+`overengineered` folder contains some redundant files, which I intended to use in one of the solutions, but the reason why I abandoned it is explained [above](#note), so it serves no purpose other than indicate the intention.
 
 `simple` folder, on the other hand, contains the actual one.
 It has a following structure:
