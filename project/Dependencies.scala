@@ -12,7 +12,8 @@ object Dependencies {
     val doobie = "1.0.0-RC4"
     val izumi = "1.2.5"
     val chimney = "0.8.5"
-    val munit = "1.0.0-M10"
+    val munit = "1.0.0-M11"
+    val decline = "2.4.1"
   }
 
   object O { // organizations
@@ -25,6 +26,7 @@ object Dependencies {
     val tpolecat = "org.tpolecat"
     val scalaland = "io.scalaland"
     val scalameta = "org.scalameta"
+    val monovore = "com.monovore"
   }
 
   // ----------------------------
@@ -41,4 +43,5 @@ object Dependencies {
   lazy val fly4s = O.geirolz %% "fly4s" % V.fly4s
   lazy val chimney = O.scalaland %% "chimney" % V.chimney
   lazy val munit = O.scalameta %% "munit" % V.munit
+  lazy val declineEffect = O.monovore %% "decline-effect" % V.decline
 }
