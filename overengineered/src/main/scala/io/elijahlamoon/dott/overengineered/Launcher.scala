@@ -20,8 +20,11 @@ import IntervalsFilters._
 object Launcher
     extends CommandIOApp(
       name = "java -jar dott.jar",
-      header =
-        "A utility to check whether older products are still being sold in Dott",
+      header = """
+        |A utility to check whether older products are still being sold in Dott.
+        |Provide 2 timestamps of type YYYY-MM-DD to filter items created between them.
+        |Optionally, provide a time interval or several to limit/expand search of orders which contain those filtered items
+        """.stripMargin,
       version = BuildInfo.version
     ) {
 
