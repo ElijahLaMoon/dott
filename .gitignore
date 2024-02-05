@@ -8,3 +8,4 @@ project/target
 target/
 data/
 run
+database.db
