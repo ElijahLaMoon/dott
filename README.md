@@ -1,5 +1,5 @@
 # Dott
-This project is an exercise application to gather some statistics on fictional e-commerce platform
+This project is an exercise application to gather some statistics on an e-commerce platform
 
 ### Note
 When I was assigned this exercise I was suggested to take 2 approaches: a straightforward one, fast and dirty, and an "overengineered" one.

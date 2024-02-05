@@ -108,7 +108,7 @@ object Launcher
                   })
                   .sequence
                   .map(_.map { case (timeFrame, count) =>
-                    s"Orders placed in custom timeframe ${timeFrame}: $count orders"
+                    s"Orders placed in custom timeframe ${timeFrame} months: $count orders"
                   }.mkString("\n", "\n", "\n"))
               },
               ifFalse = {
