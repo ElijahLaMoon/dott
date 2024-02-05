@@ -47,7 +47,7 @@ Optionally, takes a number of orders to generate, if not provided generates __15
 For example following input __might__ produce such results,
 ```scala
 $ sbt
-> run 2013-01-01 2019-05-6 
+> run 2013-01-01 2019-05-06 
 Products added between 2013-01-01T00:00 and 2016-05-02T00:00: Product(Simon L. Peyton Jones, The Implementation of Functional Programming Languages,Books,0.402,16.49,2015-05-04T00:00), Product(Paul Chiusano, Functional Programming in Scala,Books,0.267,13.49,2014-08-01T00:00)
 Orders placed in timeframes:
 1-3 months: 0 orders
