@@ -59,14 +59,32 @@ lazy val root = project
 lazy val simple = project
   .in(file("simple"))
   .settings(baseSettings)
-  .settings(name := "dott-simple", libraryDependencies += munit % Test)
+  .settings(
+    name := "dott-simple",
+    libraryDependencies += munit % Test
+  )
 
 lazy val overengineered = project
   .in(file("overengineered"))
   .settings(baseSettings)
   .settings(
     name := "dott-overengineered",
-    libraryDependencies ++= sharedDependencies
+    libraryDependencies ++= Seq(
+      cats,
+      catsEffect,
+      fs2,
+      quillJdbc,
+      quillDoobie,
+      sqliteJdbc,
+      doobieCore,
+      doobieHikari,
+      logstage,
+      // logstageSlf4j,
+      fly4s,
+      chimney,
+      declineEffect,
+      munit % Test
+    )
   )
 
 addCommandAlias("run", "simple/run")
