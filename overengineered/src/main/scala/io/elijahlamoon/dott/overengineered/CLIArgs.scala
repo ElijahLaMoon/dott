@@ -25,9 +25,9 @@ object CLIArgs {
     .orNone
 
   private val intervalStart = Opts
-    .argument[LocalDate]("interval start")
+    .argument[LocalDate]("starting timestamp")
   private val intervalEnd = Opts
-    .argument[LocalDate]("interval end")
+    .argument[LocalDate]("closing timestamp")
 
   val intervalOptions = (intervalStart, intervalEnd).tupled.mapValidated {
     case (start, end) =>
