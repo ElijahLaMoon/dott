@@ -8,7 +8,7 @@ object Dependencies {
     val fs2 = "3.9.4"
     val quill = "4.8.1"
     val fly4s = "1.0.0"
-    val sqliteJdbc = "3.45.0.0"
+    val sqliteJdbc = "3.45.1.0"
     val doobie = "1.0.0-RC4"
     val izumi = "1.2.5"
     val chimney = "0.8.5"
