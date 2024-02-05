@@ -75,6 +75,17 @@ Options and flags:
         To provide multiple intervals just pass them as several options with their own flags, e.g. '-i 4-5 -i <3 -i >15'
 ```
 
+### Jar generation
+This project uses [sbt-assembly](https://index.scala-lang.org/sbt/sbt-assembly/) for uber-jars
+```
+$ sbt
+> compile; assembly
+```
+Now instead of `sbt run` you'll be able to run the jar with
+```
+java -jar ./overengineered/target/scala-2.13/dott.jar
+```
+
 ### Initial setup
 ```
 $ sbt
