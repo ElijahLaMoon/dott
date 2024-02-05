@@ -86,4 +86,5 @@ lazy val overengineered = project
     )
   )
 
-addCommandAlias("run", "simple/run")
+addCommandAlias("run", "overengineered/run")
+addCommandAlias("assembly", "overengineered/assembly")
