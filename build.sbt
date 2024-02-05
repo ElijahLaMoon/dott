@@ -34,20 +34,18 @@ lazy val baseSettings = Seq(
   console / tpolecatExcludeOptions ++= ScalacOptions.defaultConsoleExclude
 )
 
-lazy val sharedDependencies = Seq(
-  cats,
-  catsEffect,
-  fs2,
-  quillJdbc,
-  quillDoobie,
-  sqliteJdbc,
-  doobieCore,
-  doobieHikari,
-  logstage,
-  logstageSlf4j,
-  fly4s,
-  chimney,
-  munit % Test
+lazy val buildInfoSettings = Seq(
+  buildInfoKeys := Seq[BuildInfoKey](version)
+)
+
+lazy val assemblySettings = Seq(
+  assemblyJarName := "dott.jar",
+  assemblyMergeStrategy := {
+    case "module-info.class" => MergeStrategy.discard
+    case PathList("META-INF", xs @ _*) if xs.last == "module-info.class" =>
+      MergeStrategy.discard
+    case x => (assembly / assemblyMergeStrategy).value.apply(x)
+  }
 )
 
 lazy val root = project
@@ -66,7 +64,8 @@ lazy val simple = project
 
 lazy val overengineered = project
   .in(file("overengineered"))
-  .settings(baseSettings)
+  .enablePlugins(BuildInfoPlugin)
+  .settings(baseSettings, buildInfoSettings, assemblySettings)
   .settings(
     name := "dott-overengineered",
     libraryDependencies ++= Seq(
