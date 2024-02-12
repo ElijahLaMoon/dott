@@ -91,7 +91,7 @@ java -jar ./overengineered/target/scala-2.13/dott.jar
 $ sbt
 > compile; run 2018-03-17 2024-01-01 -p 5000
 ```
-This will generate and insert ~11 products/items, 5000 orders, and approximately 15000 order-item relationships
+This will generate and insert 11 products/items, 5000 orders, and approximately 15000 order-item relationships
 
 ### Run examples
 Assuming you have a populated database
@@ -101,18 +101,18 @@ $ sbt
 ...
 ----------------------------------------
 Products with creation date between 2018-03-17 and 2024-01-01:
-Item(Product(ProductName(iPhone 8),Electronics,0.2 kg,€399,ProductCreationDate(2019-09-29T00:00),ProductUuid(d374c83b-b505-4072-b7e8-8bfe44072e7b)),€20,€71.82,€550.67);
-Item(Product(ProductName(iPhone X),Electronics,0.3 kg,€599,ProductCreationDate(2021-01-14T00:00),ProductUuid(798adf13-d3ad-4a30-8658-d256bc3bf7ea)),€20,€107.82,€816.67);
-Item(Product(ProductName(Google Pixel 6),Electronics,0.3 kg,€499,ProductCreationDate(2022-02-13T00:00),ProductUuid(a24e160d-c64a-4d6c-9f56-4fcda7023457)),€20,€89.82,€683.67);
-Item(Product(ProductName(Lenovo Legion 15ACH6H 2022),Electronics,2.0 kg,€1499,ProductCreationDate(2021-06-28T00:00),ProductUuid(988428be-5de7-460d-a759-a17db90b0aae)),€20,€269.82,€2013.67);
-Item(Product(ProductName(Martin Odersky, Programming in Scala 5th edition),Books,0.512 kg,€19.99,ProductCreationDate(2023-04-16T00:00),ProductUuid(628ade0b-3c40-4e13-bbaa-b7cfcea0bf9d)),€10,€1.4,€34.39);
-Item(Product(ProductName(Bartosz Milewski, Category Theory for Programmers),Books,0.354 kg,€14.99,ProductCreationDate(2022-05-17T00:00),ProductUuid(5578b73e-4ab0-40a7-9ea1-bde601c58a5d)),€10,€1.05,€28.29)
+Item(Product(ProductName(iPhone 8),Electronics,0.2 kg,€399,ProductCreationDate(2019-08-17T00:00),ProductUuid(5e65c40b-6214-4eb7-aef7-00069d86bb4b)),ItemShippingFee(€20),ItemTaxAmount(€71.82),ItemCost(€550.67));
+Item(Product(ProductName(iPhone X),Electronics,0.3 kg,€599,ProductCreationDate(2021-05-07T00:00),ProductUuid(beda947e-600a-4bc3-9608-4f3912874e00)),ItemShippingFee(€20),ItemTaxAmount(€107.82),ItemCost(€816.67));
+Item(Product(ProductName(Google Pixel 6),Electronics,0.3 kg,€499,ProductCreationDate(2022-12-10T00:00),ProductUuid(3934cb98-e234-4aa9-9075-2fcc33928562)),ItemShippingFee(€20),ItemTaxAmount(€89.82),ItemCost(€683.67));
+Item(Product(ProductName(Lenovo Legion 15ACH6H 2022),Electronics,2.0 kg,€1499,ProductCreationDate(2021-02-05T00:00),ProductUuid(bcf13ca4-dca3-463b-a84c-7ebf8370b675)),ItemShippingFee(€20),ItemTaxAmount(€269.82),ItemCost(€2013.67));
+Item(Product(ProductName(Martin Odersky, Programming in Scala 5th edition),Books,0.512 kg,€19.99,ProductCreationDate(2023-02-20T00:00),ProductUuid(0f3666ac-a314-4f07-b135-17c7bd68db79)),ItemShippingFee(€10),ItemTaxAmount(€1.4),ItemCost(€34.39));
+Item(Product(ProductName(Bartosz Milewski, Category Theory for Programmers),Books,0.354 kg,€14.99,ProductCreationDate(2022-07-09T00:00),ProductUuid(2dfc2a54-073d-4961-93da-26956d9e3f50)),ItemShippingFee(€10),ItemTaxAmount(€1.05),ItemCost(€28.29))
 ----------------------------------------
 Orders placed in timeframes:
 1-3 months: 0 orders
 4-6 months: 0 orders
-7-12 months: 114 orders
->12 months: 1749 orders
+7-12 months: 116 orders
+>12 months: 1792 orders
 ----------------------------------------
 ```
 
@@ -122,11 +122,11 @@ $ sbt
 ...
 ----------------------------------------
 Products with creation date between 2015-02-24 and 2020-10-05:
-Item(Product(ProductName(iPhone 8),Electronics,0.2 kg,€399,ProductCreationDate(2019-09-29T00:00),ProductUuid(d374c83b-b505-4072-b7e8-8bfe44072e7b)),€20,€71.82,€550.67);
-Item(Product(ProductName(Simon L. Peyton Jones, The Implementation of Functional Programming Languages),Books,0.402 kg,€16.49,ProductCreationDate(2015-04-24T00:00),ProductUuid(3ecb7fd2-bf3f-4e7b-a26f-21baeee38c41)),€10,€1.15,€30.12);
-Item(Product(ProductName(Edwin Brady, Type-Driven Development with Idris),Books,0.318 kg,€17.49,ProductCreationDate(2017-09-20T00:00),ProductUuid(57cfeff0-4a94-4a1e-b6bc-02250dc95877)),€10,€1.22,€31.34)
+Item(Product(ProductName(iPhone 8),Electronics,0.2 kg,€399,ProductCreationDate(2019-08-17T00:00),ProductUuid(5e65c40b-6214-4eb7-aef7-00069d86bb4b)),ItemShippingFee(€20),ItemTaxAmount(€71.82),ItemCost(€550.67));
+Item(Product(ProductName(Simon L. Peyton Jones, The Implementation of Functional Programming Languages),Books,0.402 kg,€16.49,ProductCreationDate(2015-07-27T00:00),ProductUuid(da5e7408-47b3-40df-8e1f-fb138b78e3e0)),ItemShippingFee(€10),ItemTaxAmount(€1.15),ItemCost(€30.12));
+Item(Product(ProductName(Edwin Brady, Type-Driven Development with Idris),Books,0.318 kg,€17.49,ProductCreationDate(2017-01-19T00:00),ProductUuid(cf9ad85d-849e-40a9-9cb3-d817966ad964)),ItemShippingFee(€10),ItemTaxAmount(€1.22),ItemCost(€31.34))
 ----------------------------------------
-Orders placed in custom timeframe 3-9: 0 orders
-Orders placed in custom timeframe >18: 3433 orders
+Orders placed in custom timeframe 3-9 months: 0 orders
+Orders placed in custom timeframe >18 months: 3124 orders
 ----------------------------------------
 ```
