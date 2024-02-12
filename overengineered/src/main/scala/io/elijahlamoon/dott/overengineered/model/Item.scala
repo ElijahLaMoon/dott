@@ -32,13 +32,13 @@ object Item {
   }
 
   case class ItemShippingFee(value: BigDecimal) extends AnyVal {
-    override def toString = s"€$value"
+    override def toString = s"ItemShippingFee(€$value)"
   }
   case class ItemTaxAmount(value: BigDecimal) extends AnyVal {
-    override def toString = s"€$value"
+    override def toString = s"ItemTaxAmount(€$value)"
   }
   case class ItemCost(value: BigDecimal) extends AnyVal {
-    override def toString = s"€$value"
+    override def toString = s"ItemCost(€$value)"
   }
 
 }
